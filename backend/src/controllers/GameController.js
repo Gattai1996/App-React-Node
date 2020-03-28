@@ -47,7 +47,7 @@ module.exports = {
             .select('user_id')
             .first();
 
-        if (game.user_id != user_id) {
+        if (game.user_id !== user_id) {
             return response.status(401).json({ error: 'Operação não autorizada.' });
         }
 
